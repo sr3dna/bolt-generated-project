@@ -1,0 +1,8 @@
+<div class="p-4 bg-white rounded-lg shadow-md">
+      <h2 class="text-xl font-bold mb-4">Select a Product</h2>
+      <ul>
+        <li *ngFor="let product of products" (click)="selectProduct(product)" [class.bg-blue-500]="selectedProduct === product" class="px-3 py-2 rounded-md text-sm font-medium cursor-pointer hover:bg-gray-100">
+          {{ product.name }} - ${{ product.price }}
+        </li>
+      </ul>
+    </div>

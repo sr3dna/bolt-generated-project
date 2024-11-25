@@ -1,0 +1,23 @@
+<div class="p-4 bg-white rounded-lg shadow-md">
+      <h2 class="text-xl font-bold mb-4">Order Confirmation</h2>
+      <ul>
+        <li *ngIf="selectedProduct.name">
+          Product: {{ selectedProduct.name }} - ${{ selectedProduct.price }}
+        </li>
+      </ul>
+      <form (ngSubmit)="submitForm()">
+        <div class="mb-4">
+          <label for="cardNumber" class="block text-sm font-medium text-gray-700">Card Number</label>
+          <input type="text" id="cardNumber" [(ngModel)]="cardNumber" name="cardNumber" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+        </div>
+        <div class="mb-4">
+          <label for="expiryDate" class="block text-sm font-medium text-gray-700">Expiry Date</label>
+          <input type="text" id="expiryDate" [(ngModel)]="expiryDate" name="expiryDate" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+        </div>
+        <div class="mb-4">
+          <label for="cvv" class="block text-sm font-medium text-gray-700">CVV</label>
+          <input type="text" id="cvv" [(ngModel)]="cvv" name="cvv" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+        </div>
+        <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Confirm</button>
+      </form>
+    </div>
