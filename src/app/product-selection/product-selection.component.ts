@@ -14,5 +14,6 @@ import { Component } from '@angular/core';
 
       selectProduct(product: any) {
         this.selectedProduct = product;
+        localStorage.setItem('selectedProduct', JSON.stringify(this.selectedProduct));
       }
     }

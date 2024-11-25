@@ -11,6 +11,9 @@ import { Component } from '@angular/core';
       cvv = '';
 
       submitForm() {
+        localStorage.setItem('cardNumber', this.cardNumber);
+        localStorage.setItem('expiryDate', this.expiryDate);
+        localStorage.setItem('cvv', this.cvv);
         console.log('Credit Card Form Submitted:', this.cardNumber, this.expiryDate, this.cvv);
       }
     }
